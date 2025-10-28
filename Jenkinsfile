@@ -63,12 +63,12 @@ pipeline {
                         if (isUnix()) {
                             sh """
                                 echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
-                                docker push ${DOCKERHUB_REPO}:${DOCKER_IMAGE_TAG}
+                                docker push ${DOCKER_IMAGE}:${DOCKER_IMAGE_TAG}
                             """
                         } else {
                             bat """
                                 echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
-                                docker push ${DOCKERHUB_REPO}:${DOCKER_IMAGE_TAG}
+                                docker push ${DOCKER_IMAGE}:${DOCKER_IMAGE_TAG}
                             """
                         }
                     }
