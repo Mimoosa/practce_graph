@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Mimoosa/TempConvGraphicPractice.git'
+                git branch: 'main', url: 'https://github.com/Mimoosa/practce_graph.git'
             }
         }
 
