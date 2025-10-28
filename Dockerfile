@@ -1,3 +1,5 @@
+FROM openjdk:17-slim
+
 WORKDIR /app
 
 # Install GUI libraries
